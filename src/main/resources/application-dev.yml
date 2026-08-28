@@ -1,0 +1,16 @@
+spring:
+  # 数据源配置
+  datasource:
+    url: jdbc:mysql://localhost:43306/pai
+    username: root
+    password: root
+# Knife4j 增强配置
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+    enable-swagger-models: true
+    swagger-model-name: '实体类列表'
+    enable-footer: false
+    enable-footer-custom: true
+    footer-custom-content: 'Apache License 2.0 | Copyright  2025 - [杰普软件科技有限公司]'
