@@ -4,6 +4,31 @@ spring:
     url: jdbc:mysql://localhost:43306/pai
     username: root123
     password: root
+  # Redis缓存配置
+  data:
+    redis:
+      database: 0
+      host: localhost          # 根据实际情况修改
+      port: 6379
+      password:                # 如有密码在此填写
+      lettuce:
+        pool:
+          # 最小空闲连接数
+          min-idle: 10
+          # 最大空闲连接数
+          max-idle: 20
+          # 最大活跃连接数
+          max-active: 20
+          # 最大等待时间
+          max-wait: 2000
+
+# 自定义上传配置（数据集实体图片存储）
+upload:
+  nginx-file-path: D:/nginx/pai-file-nginx/html   # 本地文件存储目录
+  nginx-server: http://localhost:89               # 图片访问前缀
+  file-directory-name: file
+  chunk-directory-name: chunk
+
 # Knife4j 增强配置
 knife4j:
   enable: true
